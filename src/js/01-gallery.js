@@ -10,10 +10,10 @@ console.log(refGallery);
 
 const newItem = galleryItems
   .map(
-    item => `<div class="gallery__item">
-  <a class="lazyload" href = "${item.original}">
-  <img class = loading='lazy' src="${item.preview}"  alt = "${item.description}"/>
-  </div>`
+    item => `
+  <a class="gallery__item" href = "${item.original}">
+  <img class="gallery__image" src="${item.preview}"  alt = "${item.description}"/>
+  </a>`
   )
   .join('');
 
