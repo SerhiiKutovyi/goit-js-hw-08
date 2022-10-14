@@ -1,25 +1,23 @@
 import { galleryItems } from './gallery-items.js';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+
 // Add imports above this line
 
 /* Добавь библиотеку SimpleLightbox как зависимость проекта используя npm*/
-console.log(galleryItems);
+
 const refGallery = document.querySelector('.gallery');
-console.log(refGallery);
 
 const newItem = galleryItems
   .map(
-    {
-      original,
-      preview,
-      description,
-    }`<a class="gallery__item" href = "${original}"><img class="gallery__image" src="${preview}"  alt = "${description}"/></a>`
+    item => `
+  <a class="gallery__item" href = "${item.original}">
+  <img class="gallery__image" src="${item.preview}"  alt = "${item.description}"/>
+  </a>`
   )
   .join('');
 
 refGallery.innerHTML = newItem;
-
 refGallery.addEventListener('click', openItemsClick);
 
 function openItemsClick(event) {
