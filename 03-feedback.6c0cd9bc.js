@@ -1,2 +1,0 @@
-!function(){const e="feedback-form-state",o=document.querySelector(".feedback-form");console.log(o);const t=document.querySelector(".feedback-form textarea");console.log(t),o.addEventListener("submit",(function(e){e.preventDefault(),console.log("helo form!"),e.currentTarget.reset()})),t.addEventListener("input",(function(o){const t=o.target.value;localStorage.setItem(e,t),console.log(t)})),function(){const o=localStorage.getItem(e);o&&(console.log(o),t.value=o)}()}();
-//# sourceMappingURL=03-feedback.6c0cd9bc.js.map
