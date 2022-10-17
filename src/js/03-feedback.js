@@ -33,6 +33,7 @@ function onFormInput(event) {
 }
 
 function getFormInput() {
-  ref.email.value = formData.email;
-  ref.message.value = formData.message;
+  const { email, message } = formData;
+  ref.email.value = email;
+  ref.message.value = message;
 }
